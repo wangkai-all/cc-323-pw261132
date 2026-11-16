@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>项目组合分析</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>项目组合分析</h1>
+  <div class="hdr-controls">
+    <label>方案 <select id="scenario-select"></select></label>
+    <span id="scenario-badges"></span>
+    <label>计划员 <input id="planner" type="text" placeholder="你的名字" size="8"></label>
+  </div>
+</header>
+
+<nav id="tabs">
+  <button data-tab="assumptions" class="active">假设与方案</button>
+  <button data-tab="gantt">甘特图</button>
+  <button data-tab="conflicts">冲突与瓶颈</button>
+  <button data-tab="compare">方案比较</button>
+  <button data-tab="execution">执行与确认</button>
+</nav>
+
+<div id="message" class="hidden"></div>
+
+<main>
+  <section id="tab-assumptions" class="tab active"></section>
+  <section id="tab-gantt" class="tab"></section>
+  <section id="tab-conflicts" class="tab"></section>
+  <section id="tab-compare" class="tab"></section>
+  <section id="tab-execution" class="tab"></section>
+</main>
+
+<div id="detail-panel" class="hidden">
+  <div id="detail-content"></div>
+  <button id="detail-close">关闭</button>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
